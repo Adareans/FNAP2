@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 776765675}
   - component: {fileID: 776765674}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -691,7 +691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776765673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 1, z: -3.16}
+  m_LocalPosition: {x: 0, y: 1, z: -3.16}
   m_LocalScale: {x: 10.00144, y: 2.1244917, z: 3.1929}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1666,7 +1666,7 @@ GameObject:
   - component: {fileID: 2069451476}
   - component: {fileID: 2069451475}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1742,7 +1742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069451474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 2.02, z: -3.16}
+  m_LocalPosition: {x: 0, y: 2.02, z: -3.16}
   m_LocalScale: {x: 10.064164, y: 0.63207877, z: 3.555294}
   m_Children: []
   m_Father: {fileID: 0}
