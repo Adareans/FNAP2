@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public AudioSource footstepsound;
 
     Vector3 velocity;
     bool isGrounded; 
@@ -43,6 +45,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if(controller.isGrounded && controller.velocity.magnitude > 1f && footstepsound.isPlaying == false){
+            footstepsound.volume = Random.Range(.5f, 1.1f);
+
+            footstepsound.pitch = Random.Range(.7f, .9f);
+
+            footstepsound.Play();
         }
 
         velocity.y += gravity * Time.deltaTime;
