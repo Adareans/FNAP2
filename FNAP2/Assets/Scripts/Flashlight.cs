@@ -26,10 +26,6 @@ public class Flashlight : MonoBehaviour
            if(isON){
                 ON.SetActive(false);
                 OFF.SetActive(true);
-                
-                lightsound.volume = (1.1f);
-
-                lightsound.pitch = (.9f);
 
                 lightsound.Play();
            }
@@ -37,10 +33,6 @@ public class Flashlight : MonoBehaviour
             if(!isON){
                 ON.SetActive(true);
                 OFF.SetActive(false);
-            
-                lightsound.volume = (.5f);
-
-                lightsound.pitch = (.7f);
 
                 lightsound.Play();
             }

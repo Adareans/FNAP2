@@ -8,12 +8,16 @@ public class DoorOpener : MonoBehaviour
     public bool down;
     public bool upstop;
     public bool downstop;
+    public GameObject txtToDisplay;
+    private bool PlayerInZone;
 
     // Start is called before the first frame update
     void Start()
     {
         up = true;
         upstop = true;
+        PlayerInZone = false;      
+        txtToDisplay.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,7 +29,8 @@ public class DoorOpener : MonoBehaviour
             Door.transform.Translate(Vector3.down * Time.deltaTime * 15);
         }
 
-        if(Input.GetKeyDown(KeyCode.E)) {
+        if(Input.GetKeyDown(KeyCode.E) && PlayerInZone) {
+            gameObject.GetComponent<AudioSource>().Play();
             if (up && upstop) {
                 down = true;
                 up = false;
@@ -46,6 +51,23 @@ public class DoorOpener : MonoBehaviour
             upstop = false;
         }
 
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            txtToDisplay.SetActive(true);
+            PlayerInZone = true;
+        }
+     }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            PlayerInZone = false;
+            txtToDisplay.SetActive(false);
+        }
     }
 
 
