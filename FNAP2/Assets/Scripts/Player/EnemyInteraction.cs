@@ -24,7 +24,7 @@ public class EnemyInteraction : MonoBehaviour
         {
             CharacterController cc = player.GetComponent<CharacterController>();
             cc.enabled = false;
-            player.transform.position = new Vector3(-0.47f, 4.12f, -1.18f);
+            player.transform.position = new Vector3(-16.69f, 0, -36.93f);
             cc.enabled = true;
             Debug.Log(transform.position);
         }
