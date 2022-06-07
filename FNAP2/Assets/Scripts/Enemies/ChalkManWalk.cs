@@ -96,7 +96,7 @@ public class ChalkManWalk : MonoBehaviour
     {
      if (other.tag == "Door")
         {
-            player.transform.position = home1.transform.position;
+            player.transform.position = new Vector3(-48.9f, 2f, 50.85f);
             Debug.Log(transform.position);
             
         }
